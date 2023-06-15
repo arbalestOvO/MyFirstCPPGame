@@ -2,7 +2,7 @@
 
 
 #include "Test_Character.h"
-#include<MyFirstArpgGame/DebugMacros.h>
+#include "MyFirstArpgGame/DebugMacros.h"
 #include "GameFramework/CharacterMovementComponent.h"
 // Sets default values
 ATest_Character::ATest_Character()
@@ -27,8 +27,9 @@ void ATest_Character::Tick(float DeltaTime)
 	RunningTime += DeltaTime;
 	DrawDebugSphere(GetWorld(), GetActorLocation(), 100.f, 24, FColor::Red, false, -1);
 	//const auto Ff = FVector(GetActorForwardVector().X, GetActorForwardVector().Y, FMath::Sin(RunningTime) * 10) * 50 * DeltaTime;
-	AddActorWorldOffset(GetActorForwardVector() * 500 * DeltaTime);
-	AddActorWorldOffset(FVector(0,0,FMath::Sin(RunningTime) * 50));
+	// AddActorWorldOffset(GetActorForwardVector() * 500 * DeltaTime);
+	// AddActorWorldOffset(FVector(0,0,FMath::Sin(RunningTime) * 50));
+	
 }
 
 // Called to bind functionality to input
